@@ -16,11 +16,16 @@ class Counter extends Component {
     render() {
         return (
             <div>
-                <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+                <span Style="Width: 50px;" className={this.getBadgeClasses()}>{this.formatCount()}</span>
                 <button 
                     onClick={ () => this.props.onIncrement(this.props.counter) } 
-                    className="btn btn-secondary btn-sm">
-                    Increment
+                    className="btn btn-success btn-sm">
+                    +
+                </button>
+                <button
+                    onClick={ () => this.props.onDecrement(this.props.counter) }
+                    className="btn btn-info btn-sm m-2">
+                    -
                 </button>
                 <button 
                     onClick={ () => this.props.onDelete(this.props.counter.id) } 

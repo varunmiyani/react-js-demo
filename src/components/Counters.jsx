@@ -4,7 +4,7 @@ import { validate } from '@babel/types'
 
 class Counters extends Component {
     render() {
-        const { onReset, onDelete, counters, onIncrement } = this.props
+        const { onReset, onDelete, counters, onIncrement, onDecrement } = this.props
         return (
             <div>
                 <button 
@@ -16,6 +16,7 @@ class Counters extends Component {
                         key={counter.id} 
                         onDelete={onDelete}
                         onIncrement={onIncrement}
+                        onDecrement={onDecrement}
                     />)}
             </div>
         )
